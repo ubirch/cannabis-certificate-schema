@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ubirch.com/schema/DHC.core.schema.json",
-  "title": "Digital Cannabis Certificate",
-  "description": "Digital Cannabis Certificate Core Data Types",
+  "$id": "https://ubirch.com/schema/DHCC.core.schema.json",
+  "title": "Digital Hemp Cannabis Certificate",
+  "description": "Digital Hemp Cannabis Certificate Core Data Types",
   "$comment": "Derived from https://github.com/ehn-dcc-development/eu-dcc-schema",
   "$defs": {
     "person": {

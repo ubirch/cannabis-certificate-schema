@@ -1,4 +1,4 @@
-# Cannabis Certificate Schema
+# Digital Hemp Cannabis Certificate (DHCC) Schema
 
 - [examples](examples) - Example JSON files for Cannabis Certificates
 - [schema](schema) - The Cannabis Certificate JSON Schema

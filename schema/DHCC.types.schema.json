@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://ubirch.com/schema/DHC.types.schema.json",
-  "title": "Digital Cannabis Certificate",
-  "description": "Digital Cannabis Certificate Certificate Data Types",
+  "title": "Digital Hemp Cannabis Certificate",
+  "description": "Digital Hemp Cannabis Certificate Certificate Data Types",
   "$comment": "Derived from https://github.com/ehn-dcc-development/eu-dcc-schema",
   "$defs": {
-    "cannabis-patient-certificate": {
+    "dhcc-distribution-certificate": {
       "required": [
         "pi",
         "a",
@@ -14,7 +14,7 @@
       ],
       "pi": {
         "description": "product identifier, URN format as defined in the documentation",
-        "$ref": "DHC.valuesets.schema.json#/$defs/cannabis-product-identifier",
+        "$ref": "DHCC.valuesets.schema.json#/$defs/cannabis-product-identifier",
         "maxLength": 80
       },
       "bi": {
@@ -60,6 +60,7 @@
         "type": "string",
         "format": "date"
       }
-    }
+    },
+    "dhcc-production-certificate": {}
   }
 }

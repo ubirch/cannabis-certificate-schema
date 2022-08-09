@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://id.uvci.eu/DCC.ValueSets.schema.json",
-  "title": "EU DCC",
-  "description": "EU Digital Covid Certificate Value Set Data Types",
+  "title": "Digital Hemp Cannabis Certificate product identifiers",
+  "description": "Digital Hemp Cannabis Certificate value set data types",
   "$defs": {
     "cannabis-product-identifier": {
       "description": "Digital Cannabis Certificate product identifiers",

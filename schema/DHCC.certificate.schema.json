@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ubirch.com/cannabis-certificate-schema.json",
+  "type": "object",
+  "title": "Digital Hemp Cannabis Certificate",
+  "description": "Digital Hemp Cannabis Certificate Schema",
+  "$comment": "Schema version 0.9.0",
+  "oneOf": [
+    {
+      "required": [
+        "ver",
+        "di",
+        "ci",
+        "p",
+        "i"
+      ]
+    },
+    {
+      "required": [
+        "ver",
+        "di",
+        "ci",
+        "pc"
+      ]
+    }
+  ],
+  "properties": {
+    "ver": {
+      "title": "Schema version",
+      "description": "Version of the schema, according to Semantic versioning (ISO, https://semver.org/ version 2.0.0 or newer)",
+      "type": "string",
+      "pattern": "^\\d+.\\d+.\\d+$",
+      "examples": [
+        "0.9.0"
+      ]
+    },
+    "di": {
+      "description": "ISO8601 date: date when certificate was issued",
+      "type": "string",
+      "format": "date"
+    },
+    "ci": {
+      "description": "Identifier for this certificate",
+      "$ref": "DHCC.core.schema.json#/$defs/certificate-id"
+    },
+    "p": {
+      "type": "object",
+      "properties": {
+        "p": {
+          "description": "Person information: surname(s) and/or forename(s)",
+          "$ref": "DHCC.core.schema.json#/$defs/person"
+        }
+      }
+    },
+    "i": {
+      "description": "DHCC distribution certificate group (can have multiple items, requires 'p')",
+      "type": "array",
+      "items": {
+        "$ref": "DHCC.types.schema.json#/$defs/dhcc-distribution-certificate"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    },
+    "pc": {
+      "description": "DHCC production certificate group",
+      "type": "array",
+      "items": {
+        "$ref": "DHCC.types.schema.json#/$defs/dhcc-production-certificate"
+      },
+      "minItems": 1,
+      "maxItems": 1
+    }
+  }
+}

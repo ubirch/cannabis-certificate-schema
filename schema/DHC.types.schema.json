@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ubirch.com/schema/DHC.types.schema.json",
+  "title": "Digital Cannabis Certificate",
+  "description": "Digital Cannabis Certificate Certificate Data Types",
+  "$comment": "Derived from https://github.com/ehn-dcc-development/eu-dcc-schema",
+  "$defs": {
+    "cannabis_patient_certificate": {
+      "required": [
+        "pi",
+        "a",
+        "u",
+        "exp"
+      ],
+      "pi": {
+        "description": "product identifier, URN format as defined in the documentation",
+        "type": "string",
+        "maxLength": 80
+      },
+      "bi": {
+        "description": "Batch Identifier, URN format as defined in the documentation",
+        "type": "string",
+        "maxLength": 80
+      },
+      "a": {
+        "description": "Amount of the substance",
+        "type": " number",
+        "minimum": 0
+      },
+      "u": {
+        "description": "Unit of measurement for substance, eiter grams or milliliter",
+        "type": "string",
+        "oneOf": [
+          "ml",
+          "g"
+        ]
+      },
+      "f": {
+        "description": "Form of the cannabis drug, e - extract, f - flower",
+        "type": "string",
+        "oneOf": [
+          "e",
+          "f"
+        ]
+      },
+      "thc": {
+        "description": "Percentage of THC in the substance, between 0 and 1",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "cbd": {
+        "description": "Percentage of CBD in the substance, between 0 and 1",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "exp": {
+        "description": "Expiry of the packaged substance, ISO8601 date",
+        "type": "string",
+        "format": "date"
+      }
+    }
+  }
+}

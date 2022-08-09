@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ubirch.com/cannabis-certificate-schema.json",
+  "type": "object",
+  "title": "Cannabis Certificate",
+  "description": "Digital Cannabis Certificate",
+  "$comment": "Schema version 0.9.0",
+  "required": [
+    "ver",
+    "p",
+    "di",
+    "ci",
+    "i"
+  ],
+  "properties": {
+    "ver": {
+      "title": "Schema version",
+      "description": "Version of the schema, according to Semantic versioning (ISO, https://semver.org/ version 2.0.0 or newer)",
+      "type": "string",
+      "pattern": "^\\d+.\\d+.\\d+$",
+      "examples": [
+        "0.9.0"
+      ]
+    },
+    "p": {
+      "description": "Surname(s), forename(s) - in that order",
+      "$ref": "DHC.core.schema.json#/$defs/person"
+    },
+    "di": {
+      "description": "ISO8601 date: date when certificate was issued",
+      "type": "string",
+      "format": "date"
+    },
+    "ci": {
+      "description": "Identifier for this certificate",
+      "$ref": "DHC.core.schema.json#/$defs/certificate_id"
+    },
+    "i": {
+      "description": "Cannabis Certificate Group",
+      "type": "array",
+      "items": {
+        "$ref": "DHC.types.schema.json#/$defs/cannabis_patient_certificate"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ubirch.com/schema/DHC.core.schema.json",
+  "title": "Digital Cannabis Certificate",
+  "description": "Digital Cannabis Certificate Core Data Types",
+  "$comment": "Derived from https://github.com/ehn-dcc-development/eu-dcc-schema",
+  "$defs": {
+    "person": {
+      "description": "Person name: Surname(s) and/or forename(s)",
+      "anyOf": [
+        {
+          "required": [
+            "fnt"
+          ]
+        },
+        {
+          "required": [
+            "gnt"
+          ]
+        }
+      ],
+      "type": "object",
+      "properties": {
+        "fn": {
+          "title": "Surname",
+          "description": "The surname or primary name(s) of the person addressed in the certificate",
+          "type": "string",
+          "maxLength": 80,
+          "examples": [
+            "Maximiliane Dörte"
+          ]
+        },
+        "fnt": {
+          "title": "Standardised surname",
+          "description": "The surname(s) of the person, transliterated ICAO 9303",
+          "type": "string",
+          "pattern": "^[A-Z<]*$",
+          "maxLength": 80,
+          "examples": [
+            "MAXIMILIANE<DOERTE"
+          ]
+        },
+        "gn": {
+          "title": "Forename",
+          "description": "The forename(s) of the person addressed in the certificate",
+          "type": "string",
+          "maxLength": 80,
+          "examples": [
+            "Musterfrau-Schmitt Schlößer"
+          ]
+        },
+        "gnt": {
+          "title": "Standardised forename",
+          "description": "The forename(s) of the person, transliterated ICAO 9303",
+          "type": "string",
+          "pattern": "^[A-Z<]*$",
+          "maxLength": 80,
+          "examples": [
+            "MUSTERFRAU<SCHMITT<SCHLOESSER"
+          ]
+        },
+        "dob": {
+          "title": "Date of birth",
+          "description": "Date of Birth of a person addressed. ISO 8601 date format restricted to range 1900-2099 or empty",
+          "type": "string",
+          "pattern": "^((19|20)\\d\\d(-\\d\\d){0,2})?$",
+          "examples": [
+            "1979-04-14",
+            "1950",
+            "1901-08",
+            ""
+          ]
+        }
+      }
+    },
+    "certificate_id": {
+      "description": "Certificate Identifier, URN format as defined in the documentation",
+      "type": "string",
+      "maxLength": 80
+    }
+  }
+}

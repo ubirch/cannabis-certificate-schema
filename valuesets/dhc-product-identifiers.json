@@ -1,0 +1,13 @@
+{
+  "valueSetId": "dhc-product-identifiers",
+  "valueSetDate": "2022-08-09",
+  "valueSetValues": {
+    "ub:C123401/239855": {
+      "display": "Example Cannabis Product",
+      "lang": "en",
+      "active": true,
+      "system": "https://ubirch.com/schema/dhc/",
+      "version": ""
+    }
+  }
+}

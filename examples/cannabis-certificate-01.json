@@ -1,0 +1,24 @@
+{
+  "p": {
+    "fnt": "MUELLER<MUSTERFRAU",
+    "gnt": "MAXIMILIANE<ISOLDE",
+    "fn": "Müller-Musterfrau",
+    "gn": "Maximiliane Isolde",
+    "dob": "1980-01-20"
+  },
+  "i": [
+    {
+      "pi": "ub:C123401/239855",
+      "bi": "ub:GCSF314F",
+      "a": 2.5,
+      "u": "ml",
+      "f": "e",
+      "thc": 0.12,
+      "cbd": 0.0822,
+      "exp": "2025-12-10"
+    }
+  ],
+  "di": "2022-02-03",
+  "ci": "dhc:1:ub:DE/JBI32302/4Ef57666/22",
+  "ver": "1.0.0"
+}

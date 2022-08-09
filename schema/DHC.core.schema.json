@@ -73,7 +73,7 @@
         }
       }
     },
-    "certificate_id": {
+    "certificate-id": {
       "description": "Certificate Identifier, URN format as defined in the documentation",
       "type": "string",
       "maxLength": 80

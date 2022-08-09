@@ -33,7 +33,7 @@
     },
     "ci": {
       "description": "Identifier for this certificate",
-      "$ref": "DHC.core.schema.json#/$defs/certificate_id"
+      "$ref": "DHC.core.schema.json#/$defs/certificate-id"
     },
     "i": {
       "description": "Cannabis Certificate Group",

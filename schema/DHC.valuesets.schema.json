@@ -4,7 +4,7 @@
   "title": "EU DCC",
   "description": "EU Digital Covid Certificate Value Set Data Types",
   "$defs": {
-    "cannabis_product_identifier": {
+    "cannabis-product-identifier": {
       "description": "Digital Cannabis Certificate product identifiers",
       "type": "string",
       "valueset-uri": "../valuesets/dhc-product-identifiers.json"

@@ -5,7 +5,7 @@
   "description": "Digital Cannabis Certificate Certificate Data Types",
   "$comment": "Derived from https://github.com/ehn-dcc-development/eu-dcc-schema",
   "$defs": {
-    "cannabis_patient_certificate": {
+    "cannabis-patient-certificate": {
       "required": [
         "pi",
         "a",
@@ -14,7 +14,7 @@
       ],
       "pi": {
         "description": "product identifier, URN format as defined in the documentation",
-        "type": "string",
+        "$ref": "DHC.valuesets.schema.json#/$defs/cannabis-product-identifier",
         "maxLength": 80
       },
       "bi": {

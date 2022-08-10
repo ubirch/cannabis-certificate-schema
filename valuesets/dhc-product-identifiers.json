@@ -1,5 +1,5 @@
 {
-  "valueSetId": "dhc-product-identifiers",
+  "valueSetId": "dhcc-product-identifiers",
   "valueSetDate": "2022-08-09",
   "valueSetValues": {
     "ub:C123401/239855": {

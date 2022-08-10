@@ -7,7 +7,7 @@
     "cannabis-product-identifier": {
       "description": "Digital Cannabis Certificate product identifiers",
       "type": "string",
-      "valueset-uri": "../valuesets/dhc-product-identifiers.json"
+      "valueset-uri": "valuesets/dhcc-product-identifiers.json"
     }
   }
 }
